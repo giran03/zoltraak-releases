@@ -1,58 +1,92 @@
 # Zoltraak
 
-> **Currently invitation-only. Zoltraak is available only to invited users. Public access is not available at this time.**
+> **Zoltraak is currently invitation-only.**  
+> Access is limited to invited users while the app is still being developed and refined.
 
-Zoltraak is a desktop download manager with browser integration. Manage file transfers, choose video formats, organize music, and collect media from posts in one app.
+Zoltraak is a desktop download manager built to make downloading and organizing files, videos, music, and images easier — without having to jump between different tools.
+
+It combines a traditional download manager with browser integration, media detection, format selection, music organization, automatic folder routing, and other utilities in one desktop app.
 
 ## Features
 
-- **File downloads:** segmented HTTP/HTTPS transfers with configurable connections, pause and resume, retries, and recovery after an app restart. Segmentation and resume depend on the source server's support.
-- **Queue management:** priorities, bounded concurrency, search, status filters, multi-selection, and bulk actions. A shared bandwidth limit helps control concurrent transfers.
-- **Browser integration:** send links and media to the app through a paired browser extension. For supported sources, the extension can share the signed-in session needed to access media.
-- **Video:** analyze a page, direct media file, or supported HLS/DASH stream, then choose a discovered format. Separate audio and video streams can be merged using local media tools.
-- **Music:** analyze tracks, albums, and playlists; choose an output format; and organize files with metadata, cover art, and filename options. For Spotify, Apple Music, and Deezer, Zoltraak reads catalogue metadata and matches recordings on YouTube Music; those services do not directly supply the audio file. Matching depends on recording availability and is not DRM bypass.
-- **Images and galleries:** extract media from supported posts or direct links, preview the results, select what to keep, and send images to the download queue.
-- **Folder routing:** match downloads by file extension, domain, or regular expression. Rules apply when a download is added and respect an explicitly chosen destination.
-- **Scheduling:** define a daily download window and choose a completion action, such as opening the destination folder or exiting the app.
-- **Remux and conversion:** move local audio/video streams into another container, or re-encode when needed. Stream copying preserves the source; re-encoding can change quality.
-- **Discord delivery:** send finished files to a configured channel using a webhook or your own bot. Media can be prepared to fit the configured upload budget; the downloaded original remains unchanged.
+- **Fast & resumable downloads**  
+  Download files over HTTP/HTTPS using multiple connections when supported by the source. Downloads can be paused, resumed, retried, and recovered after restarting Zoltraak.
 
-Media conversion, stream merging, and related processing require local `ffmpeg`/`ffprobe` tools. Source availability, sign-in requirements, and supported formats vary by website.
+- **Download queue**  
+  Keep everything in one place with priorities, concurrent download limits, search, status filters, multi-select, and bulk actions. You can also set a global bandwidth limit when you don't want downloads taking over your connection.
 
-## Screenshot showcase
+- **Browser integration**  
+  Send links directly to Zoltraak using the companion browser extension. On supported websites, the extension can also pass the browser session needed to access media available to your signed-in account.
 
-These screenshots render the current Zoltraak interface with **demo data** in a temporary browser capture harness. File names, media, progress, and source addresses are illustrative; they are not performance measurements. Each view is captured at 1440 × 900 using the default appearance in dark system mode.
+- **Video downloads**  
+  Paste a webpage, media URL, or supported HLS/DASH stream and let Zoltraak discover the available formats. Pick the resolution and format you want before downloading. If audio and video are provided separately, Zoltraak can merge them automatically using local media tools.
+
+- **Music downloads & organization**  
+  Add individual tracks, albums, or playlists, choose your preferred audio format, and organize the result with folders, metadata, cover art, and customizable filenames.
+
+  Spotify, Apple Music, and Deezer links are used for catalogue and track information. Zoltraak then attempts to match the recording through YouTube Music rather than downloading protected audio directly from those services. Matching depends on the recording being available and is not intended to bypass DRM.
+
+- **Images & galleries**  
+  Extract images from supported posts and pages, preview what was found, select only the files you want, and add them directly to the download queue.
+
+- **Automatic folder routing**  
+  Create rules that organize new downloads based on file extension, website/domain, or regular expressions. Manually selected destinations always take priority.
+
+- **Download scheduling**  
+  Set a daily download window for queues that you don't want running all day. Zoltraak can also perform an action when everything finishes, such as opening the download folder or closing the app.
+
+- **Remuxing & conversion**  
+  Convert or remux downloaded and local audio/video files into another container or format. Stream copying keeps the original quality when possible, while re-encoding is available when conversion is required.
+
+- **Discord delivery**  
+  Automatically send completed files to a Discord channel using a webhook or your own bot. Zoltraak can prepare media around the configured upload limit while keeping the original downloaded file untouched.
+
+> **Note:** Some media features require `ffmpeg` and `ffprobe` to be installed locally. Available formats and download methods can also vary depending on the source website, authentication requirements, and what the source itself provides.
+
+---
+
+## Screenshot Showcase
+
+A look at the current Zoltraak interface.
+
+The screenshots below use demo content, so filenames, URLs, media, progress values, and download activity are only there to demonstrate the interface. They should not be treated as performance benchmarks.
 
 ### Downloads
 
-Track segmented file transfers and manage downloading, waiting, paused, and finished items in the same register.
+See everything that's downloading, queued, paused, or already completed from a single view.
 
 ![Zoltraak Downloads view with demo transfers, connection progress, status filters, and queue controls](assets/screenshots/downloads.png)
 
 ### Video
 
-Analyze a source and compare available video formats before choosing a download.
+Analyze a video source, see the formats Zoltraak discovers, and choose exactly what you want to download.
 
 ![Zoltraak Video view showing a demo source with 1080p, 720p, and 480p MP4 format choices](assets/screenshots/video.png)
 
 ### Music
 
-Review a collection's tracks and configure the format, folder layout, and metadata options for your files.
+Preview tracks in an album or playlist and configure the audio format, folder structure, metadata, artwork, and naming before downloading.
 
 ![Zoltraak Music view showing a demo album, selectable tracks, and audio output options](assets/screenshots/music.png)
 
 ### Images
 
-Preview extracted media and select the items you want to save from a gallery.
+Extract a gallery, preview the results, and choose which images you actually want to keep.
 
 ![Zoltraak Images view showing a demo gallery with four selectable landscape illustrations](assets/screenshots/images.png)
 
 ### Rules
 
-Route new downloads into folders automatically using extension, domain, or regular-expression matches.
+Let Zoltraak organize new downloads automatically with rules based on extensions, domains, or custom patterns.
 
 ![Zoltraak Rules view showing demo routing rules for archives, documents, software, and installation images](assets/screenshots/rules.png)
 
+---
+
 ## Availability
 
-**Zoltraak is currently available only to invited users.** This repository presents the product and its release materials; it does not grant access. Public access is not available at this time.
+Zoltraak is still under active development and is currently available **by invitation only**.
+
+This repository is intended to showcase the application, its features, screenshots, and release information. It does not provide public access to Zoltraak at this time.
+
+Public availability may come later as the project becomes more mature.
