@@ -49,8 +49,6 @@ It combines a traditional download manager with browser integration, media detec
 
 A look at the current Zoltraak interface.
 
-The screenshots below use demo content, so filenames, URLs, media, progress values, and download activity are only there to demonstrate the interface. They should not be treated as performance benchmarks.
-
 ### Downloads
 
 See everything that's downloading, queued, paused, or already completed from a single view.
